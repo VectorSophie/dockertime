@@ -1,0 +1,10 @@
+FROM ubuntu
+
+RUN groupadd my-group && \
+    useradd -G my-group -u 1001 user1 && \
+    useradd -G my-group -u 1004 user4
+
+
+USER user1
+
+CMD id
