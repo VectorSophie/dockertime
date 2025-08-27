@@ -1,0 +1,4 @@
+# .env 는 환경변수 파일로 여러 언어에서도 사용
+# FastAPI, reactJS, ...
+ALPHA="alpha in .env file"
+BRAVO="bravo in .env file"
