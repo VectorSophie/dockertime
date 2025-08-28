@@ -1,13 +1,29 @@
-
+version: '3.9'
 
 services:
-  server:
-    image: api.img
+  server: 
+    image: api.img 
     container_name: fastapi
-    build:
+    build: 
       context: .
       dockerfile: Dockerfile
+    ports:
+      - "80:8000"
+    volumes:
+      - D:\Workspace\dockertime\COMPOSE\app:/app
+    environment:
+      DB_HOST: localhost
+      DB_POST: 3306
+      DB_USER: web_user
+      DB_PW: pass
+      DB_NAME: mydb 
 
-    db:
-      image: mariadb:latest
-      container_name: mariadb
+  db:
+    image: mariadb:latest
+    container_name: mariadb
+    environment:
+      MARIADB_ROOT_PASSWORD: 1111
+    ports:
+      - "3306:3306"
+    volumes: 
+      - D:\Workspace\dockertime\VOL\mydb:/var/lib/mysql
