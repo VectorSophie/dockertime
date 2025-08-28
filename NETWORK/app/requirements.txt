@@ -1,0 +1,7 @@
+# 기본
+fastapi
+uvicorn
+
+# database(mariadb)
+pymysql
+sqlalchemy

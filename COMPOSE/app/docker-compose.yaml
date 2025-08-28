@@ -1,0 +1,13 @@
+
+
+services:
+  server:
+    image: api.img
+    container_name: fastapi
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    db:
+      image: mariadb:latest
+      container_name: mariadb

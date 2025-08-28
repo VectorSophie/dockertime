@@ -1,0 +1,6 @@
+# pip 로 하나하나 설치해야 하지만,requirement.txt 에 설치할 라이브러리를 명시
+# 기본
+fastapi
+uvicorn
+
+#pip install -r requirement.txt 하면 위 의내용이 전부 설치
